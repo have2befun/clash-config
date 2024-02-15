@@ -3,8 +3,8 @@ proxies:
     type: http
     server: 192.168.31.164
     port: 8080
-    tls: true
-    skip-cert-verify: true
+    # tls: true
+    # skip-cert-verify: true
 
 proxy-groups:
   - name: "proxy"
