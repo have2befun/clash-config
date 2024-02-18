@@ -1,16 +1,17 @@
 proxies:
-  - name: "http"
-    type: http
+  - name: "socks"
+    type: socks5
     server: 192.168.31.164
-    port: 8080
-    # tls: true
-    # skip-cert-verify: true
+    port: 1080
+    tls: true
+    skip-cert-verify: true
+    udp: true
 
 proxy-groups:
   - name: "proxy"
     type: select
     proxies:
-      - http
+      - socks
 
 rules:
   - SRC-IP-CIDR,192.168.31.164/32,DIRECT
