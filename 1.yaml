@@ -2,9 +2,9 @@ proxies:
   - name: "socks"
     type: socks5
     server: 192.168.31.164
-    port: 108
-    tls: true
-    skip-cert-verify: true
+    port: 1080
+    # tls: true
+    # skip-cert-verify: true
     udp: true
 
 proxy-groups:
