@@ -1,0 +1,17 @@
+proxies:
+  - name: "http"
+    type: http
+    server: 192.168.31.164
+    port: 8080
+    # tls: true
+    skip-cert-verify: true
+
+proxy-groups:
+  - name: "proxy"
+    type: select
+    proxies:
+      - http
+
+rules:
+  - SRC-IP-CIDR,192.168.31.164/32,DIRECT
+  - MATCH,proxy
