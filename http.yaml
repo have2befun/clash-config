@@ -1,7 +1,7 @@
 proxies:
   - name: "http"
     type: http
-    server: 192.168.50.201
+    server: 192.168.1.159
     port: 8080
     # tls: true
     skip-cert-verify: true
@@ -13,5 +13,5 @@ proxy-groups:
       - http
 
 rules:
-  - SRC-IP-CIDR,192.168.50.201/32,DIRECT
+  - SRC-IP-CIDR,192.168.1.159/32,DIRECT
   - MATCH,proxy
